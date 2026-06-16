@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Продукти — REFORMIA България</title>
+  <meta name="description" content="Разгледайте пълната гама пилатес реформъри, Cadillac машини, Wunda столове и барели от Reformia.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/reformialogo2.png" alt="Reformia Logo" onerror="this.style.display='none'">
+      <span class="navbar__logo-text">REFORMIA</span>
+    </a>
+    <ul class="navbar__nav">
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="products.html">Продукти</a></li>
+      <li><a href="about.html">За нас</a></li>
+      <li><a href="contact.html">Контакти</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-gold navbar__cta">Запитване</a>
+    <button class="navbar__hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="navbar__mobile">
+    <a href="index.html">Начало</a>
+    <a href="products.html">Продукти</a>
+    <a href="about.html">За нас</a>
+    <a href="contact.html">Контакти</a>
+    <a href="contact.html" class="btn btn-gold" style="text-align:center;margin-top:0.5rem;">Запитване</a>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <p class="section-label">Нашата гама</p>
+      <h1>Продукти</h1>
+      <p>Премиум пилатес оборудване за студия и домашна употреба.</p>
+    </div>
+  </div>
+
+  <!-- FILTER + GRID -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Filters -->
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:3rem;">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">Всички</button>
+          <button class="filter-tab" data-filter="reformer">Реформъри</button>
+          <button class="filter-tab" data-filter="accessory">Столове и Аксесоари</button>
+        </div>
+        <p style="font-size:0.8rem;color:var(--muted);">8 продукта</p>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid-4" id="productsGrid">
+
+        <!-- 1 Дървен Реформър – Дъб -->
+        <div class="product-item" data-category="reformer">
+          <div class="card">
+            <a href="products/reformer-dab.html">
+              <div class="card__image">
+                <img src="https://cdn.shopify.com/s/files/1/0975/7219/2583/files/d5322e7db5974f166d080141403f7fab.jpg?v=1776272489" alt="Дървен Реформър – Дъб" loading="lazy">
+              </div>
+            </a>
+            <div class="card__body">
+              <p class="card__type">Пилатес Реформър</p>
+              <h3 class="card__title">Дървен Реформър — Дъб</h3>
+              <p class="card__price">от <strong>€2 799</strong></p>
+              <a href="contact.html?product=Дървен Реформър Дъб" class="btn btn-gold" style="font-size:0.63rem;padding:0.65rem 1.2rem;width:100%;justify-content:center;">Запитване</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 Реформър от Кленово Дърво -->
+        <div class="product-item" data-category="reformer">
+          <div class="card">
+            <a href="products/reformer-klen.html">
+              <div class="card__image">
+                <img src="https://cdn.shopify.com/s/files/1/0975/7219/2583/files/ChatGPT_Image_May_26_2026_at_09_58_45_PM.png?v=1779822197" alt="Реформър от Кленово Дърво" loading="lazy">
+              </div>
+            </a>
+            <div class="card__body">
+              <p class="card__type">Пилатес Реформър</p>
+              <h3 class="card__title">Реформър от Кленово Дърво</h3>
+              <p class="card__price">от <strong>€3 199</strong></p>
+              <a href="contact.html?product=Реформър от Кленово Дърво" class="btn btn-gold" style="font-size:0.63rem;padding:0.65rem 1.2rem;width:100%;justify-content:center;">Запитване</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Бял Сгъваем Реформър -->
+        <div class="product-item" data-category="reformer">
+          <div class="card">
+            <a href="products/reformer-byal-sgavaem.html">
+              <div class="card__image">
+                <img src="https://cdn.shopify.com/s/files/1/0975/7219/2583/files/3e360fb65986ed6283c880154f077ee1.jpg?v=1778079282" alt="Бял Сгъваем Реформър" loading="lazy">
+              </div>
+            </a>
+            <div class="card__body">
+              <p class="card__type">Пилатес Реформър</p>
+              <h3 class="card__title">Бял Сгъваем Реформър</h3>
+              <p class="card__price">от <strong>€2 899</strong></p>
+              <a href="contact.html?product=Бял Сгъваем Реформър" class="btn btn-gold" style="font-size:0.63rem;padding:0.65rem 1.2rem;width:100%;justify-content:center;">Запитване</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Оникс Сгъваем Реформър -->
+        <div class="product-item" data-category="reformer">
+          <div class="card">
+            <a href="products/reformer-onyx-sgavaem.html">
+              <div class="card__image">
+                <img src="https://cdn.shopify.com/s/files/1/0975/7219/2583/files/0347e040fd760e1e0e3429fd8c2e77c8.png?v=1778080356" alt="Оникс Сгъваем Реформър" loading="lazy">
+              </div>
+            </a>
+            <div class="card__body">
+              <p class="card__type">Пилатес Реформър</p>
+              <h3 class="card__title">Оникс Сгъваем Реформър</h3>
+              <p class="card__price">от <strong>€2 899</strong></p>
+              <a href="contact.html?product=Оникс Сгъваем Реформър" class="btn btn-gold" style="font-size:0.63rem;padding:0.65rem 1.2rem;width:100%;justify-content:center;">Запитване</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Дървен Сглобяем Реформър -->
+        <div class="product-item" data-category="reformer">
+          <div class="card">
+            <a href="products/reformer-darven-sglobqem.html">
+              <div class="card__image">
+                <img src="https://cdn.shopify.com/s/files/1/0975/7219/2583/files/ChatGPT_Image_May_27_2026_at_12_09_20_PM.png?v=1779872972" alt="Дървен Сглобяем Реформър" loading="lazy">
+              </div>
+            </a>
+            <div class="card__body">
+              <p class="card__type">Пилатес Реформър</p>
+              <h3 class="card__title">Дървен Сглобяем Реформър</h3>
+              <p class="card__price">от <strong>€2 399</strong></p>
+              <a href="contact.html?product=Дървен Сглобяем Реформър" class="btn btn-gold" style="font-size:0.63rem;padding:0.65rem 1.2rem;width:100%;justify-content:center;">Запитване</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 Кадилак Реформър от Клен -->
+        <div class="product-item" data-category="reformer">
+          <div class="card">
+            <a href="products/kadilak-klen.html">
+              <div class="card__image">
+                <img src="https://cdn.shopify.com/s/files/1/0975/7219/2583/files/ChatGPT_Image_May_26_2026_at_11_30_22_PM.png?v=1779827527" alt="Кадилак Реформър от Клен" loading="lazy">
+              </div>
+            </a>
+            <div class="card__body">
+              <p class="card__type">Кадилак Реформър</p>
+              <h3 class="card__title">Кадилак Реформър от Клен</h3>
+              <p class="card__price">от <strong>€4 499</strong></p>
+              <a href="contact.html?product=Кадилак Реформър от Клен" class="btn btn-gold" style="font-size:0.63rem;padding:0.65rem 1.2rem;width:100%;justify-content:center;">Запитване</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 Уунда Стол -->
+        <div class="product-item" data-category="accessory">
+          <div class="card">
+            <a href="products/wunda-chair.html">
+              <div class="card__image">
+                <img src="https://cdn.shopify.com/s/files/1/0975/7219/2583/files/ChatGPT_Image_May_27_2026_at_01_20_13_PM.png?v=1779877224" alt="Уунда Стол" loading="lazy">
+              </div>
+            </a>
+            <div class="card__body">
+              <p class="card__type">Пилатес Стол</p>
+              <h3 class="card__title">Уунда Стол</h3>
+              <p class="card__price">от <strong>€999</strong></p>
+              <a href="contact.html?product=Уунда Стол" class="btn btn-gold" style="font-size:0.63rem;padding:0.65rem 1.2rem;width:100%;justify-content:center;">Запитване</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 Барел от Кленово Дърво -->
+        <div class="product-item" data-category="accessory">
+          <div class="card">
+            <a href="products/barel-klen.html">
+              <div class="card__image">
+                <img src="https://cdn.shopify.com/s/files/1/0975/7219/2583/files/ChatGPT_Image_May_27_2026_at_03_01_06_PM.png?v=1779883289" alt="Барел от Кленово Дърво" loading="lazy">
+              </div>
+            </a>
+            <div class="card__body">
+              <p class="card__type">Пилатес Барел</p>
+              <h3 class="card__title">Барел от Кленово Дърво</h3>
+              <p class="card__price">от <strong>€999</strong></p>
+              <a href="contact.html?product=Барел от Кленово Дърво" class="btn btn-gold" style="font-size:0.63rem;padding:0.65rem 1.2rem;width:100%;justify-content:center;">Запитване</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <p class="section-label">Индивидуален подход</p>
+      <h2>Персонализация по заявка</h2>
+      <div class="divider"></div>
+      <p style="max-width:480px;margin:0 auto 2rem;">Всеки продукт е наличен в 8 стандартни цвята. Възможни са персонализирани цветове и брандиране с лого на студиото ви.</p>
+      <a href="contact.html" class="btn btn-gold-fill">Изпрати запитване</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">REFORMIA</div>
+          <p>Премиум пилатес оборудване за студия и домашна употреба.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Навигация</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Начало</a></li>
+            <li><a href="products.html">Продукти</a></li>
+            <li><a href="about.html">За нас</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Контакти</p>
+          <ul class="footer__links">
+            <li><a href="mailto:support@thereformia.com">support@thereformia.com</a></li>
+            <li><a href="tel:+359876788968">+359 876 788 968</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Правна информация</p>
+          <ul class="footer__links">
+            <li><a href="policies/privacy.html">Политика за поверителност</a></li>
+            <li><a href="policies/refund.html">Правила за връщане</a></li>
+            <li><a href="policies/shipping.html">Политика за доставка</a></li>
+            <li><a href="policies/terms.html">Условия за ползване</a></li>
+            <li><a href="policies/legal.html">Правна информация</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 REFORMIA. Всички права запазени.</span>
+        <span>CE · ISO 9001 · 2 г. гаранция</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

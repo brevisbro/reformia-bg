@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти — REFORMIA България</title>
+  <meta name="description" content="Изпратете запитване за пилатес оборудване от Reformia. Отговаряме в рамките на 24 часа.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/reformialogo2.png" alt="Reformia Logo" onerror="this.style.display='none'">
+      <span class="navbar__logo-text">REFORMIA</span>
+    </a>
+    <ul class="navbar__nav">
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="products.html">Продукти</a></li>
+      <li><a href="about.html">За нас</a></li>
+      <li><a href="contact.html">Контакти</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-gold navbar__cta">Запитване</a>
+    <button class="navbar__hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="navbar__mobile">
+    <a href="index.html">Начало</a>
+    <a href="products.html">Продукти</a>
+    <a href="about.html">За нас</a>
+    <a href="contact.html">Контакти</a>
+    <a href="contact.html" class="btn btn-gold" style="text-align:center;margin-top:0.5rem;">Запитване</a>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <p class="section-label">Свържете се с нас</p>
+      <h1>Запитване</h1>
+      <p>Отговаряме в рамките на 24 часа в работни дни.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT LAYOUT -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Info side -->
+        <div class="contact-info">
+          <p class="section-label">Контактна информация</p>
+          <h2 class="contact-info__title">Говорете<br><em>с нас</em></h2>
+          <div class="divider divider--left"></div>
+          <p>Изпратете ни запитване с предпочитания от вас модел и цвят. Ще ви предоставим детайлна информация, ценова оферта и срок за доставка.</p>
+
+          <div style="margin-top:2.5rem;">
+            <div class="contact-detail">
+              <div class="contact-detail__icon">✉</div>
+              <div>
+                <div class="contact-detail__label">Имейл</div>
+                <div class="contact-detail__value"><a href="mailto:support@thereformia.com" style="color:var(--gold);">support@thereformia.com</a></div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail__icon">✆</div>
+              <div>
+                <div class="contact-detail__label">Телефон</div>
+                <div class="contact-detail__value"><a href="tel:+359876788968">+359 876 788 968</a></div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail__icon">◎</div>
+              <div>
+                <div class="contact-detail__label">Локация</div>
+                <div class="contact-detail__value">България</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:2.5rem;padding:1.5rem;border:1px solid var(--border-gold);border-radius:2px;background:rgba(201,169,110,0.04);">
+            <p class="section-label" style="margin-bottom:0.5rem;">Работно време</p>
+            <p style="font-size:0.85rem;color:var(--text);">Понеделник – Петък<br>09:00 – 18:00 ч.</p>
+          </div>
+
+          <div style="margin-top:2rem;">
+            <div class="cert-badges">
+              <span class="cert-badge">CE Сертификат</span>
+              <span class="cert-badge">ISO 9001</span>
+              <span class="cert-badge">2 г. гаранция</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form side -->
+        <div>
+          <form class="form inquiry-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Вашето име *</label>
+                <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Телефон *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+359 88 888 8888" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Имейл адрес *</label>
+              <input type="email" id="email" name="email" placeholder="вашият@имейл.bg" required>
+            </div>
+            <div class="form-group">
+              <label for="product">Продукт, за който се интересувате *</label>
+              <select id="product" name="product" required>
+                <option value="" disabled selected>— Изберете продукт —</option>
+                <option value="Дървен Реформър – Дъб">Дървен Реформър – Дъб (€2 799)</option>
+                <option value="Реформър от Кленово Дърво">Реформър от Кленово Дърво (€3 199)</option>
+                <option value="Бял Сгъваем Реформър">Бял Сгъваем Реформър (€2 899)</option>
+                <option value="Оникс Сгъваем Реформър">Оникс Сгъваем Реформър (€2 899)</option>
+                <option value="Дървен Сглобяем Реформър">Дървен Сглобяем Реформър (€2 399)</option>
+                <option value="Кадилак Реформър от Клен">Кадилак Реформър от Клен (€4 499)</option>
+                <option value="Уунда Стол">Уунда Стол (€999)</option>
+                <option value="Барел от Кленово Дърво">Барел от Кленово Дърво (€999)</option>
+                <option value="Няколко продукта / Цялостно оборудване на студио">Цялостно оборудване на студио</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="color">Предпочитан цвят (по избор)</label>
+              <input type="text" id="color" name="color" placeholder="напр. Черно, Мъдрец Зелено 64, персонализиран...">
+            </div>
+            <div class="form-group">
+              <label for="message">Съобщение *</label>
+              <textarea id="message" name="message" placeholder="Опишете нуждите си — брой единици, дали е за студио или домашна употреба, срок за доставка и всякакви допълнителни въпроси..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold-fill" style="width:100%;justify-content:center;padding:1rem;">
+              Изпрати запитване
+            </button>
+            <p style="font-size:0.75rem;color:var(--muted);text-align:center;margin-top:0.8rem;">Ще отвори вашия имейл клиент с попълнена информация.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">REFORMIA</div>
+          <p>Премиум пилатес оборудване за студия и домашна употреба.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Навигация</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Начало</a></li>
+            <li><a href="products.html">Продукти</a></li>
+            <li><a href="about.html">За нас</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Контакти</p>
+          <ul class="footer__links">
+            <li><a href="mailto:support@thereformia.com">support@thereformia.com</a></li>
+            <li><a href="tel:+359876788968">+359 876 788 968</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Правна информация</p>
+          <ul class="footer__links">
+            <li><a href="policies/privacy.html">Политика за поверителност</a></li>
+            <li><a href="policies/refund.html">Правила за връщане</a></li>
+            <li><a href="policies/shipping.html">Политика за доставка</a></li>
+            <li><a href="policies/terms.html">Условия за ползване</a></li>
+            <li><a href="policies/legal.html">Правна информация</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 REFORMIA. Всички права запазени.</span>
+        <span>CE · ISO 9001 · 2 г. гаранция</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

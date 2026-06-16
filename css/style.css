@@ -168,6 +168,9 @@ strong { color: var(--text); font-weight: 500; }
   color: var(--gold-dk);
 }
 .navbar__nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 2.5rem;

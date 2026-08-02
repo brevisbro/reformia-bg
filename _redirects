@@ -1,0 +1,6 @@
+# Каноничен хост: apex без www (премахва дублирано съдържание)
+https://www.thereformiabg.com/* https://thereformiabg.com/:splat 301!
+
+# Стари/алтернативни пътища
+/index /  301
+/index.html /  301

@@ -3,7 +3,7 @@
    Ivory & Gold (Light Theme)
    ========================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+/* Шрифтовете се зареждат неблокиращо от <head> на всяка страница (виж index.html). */
 
 :root {
   --bg: #FAFAF8;
@@ -818,4 +818,64 @@ strong { color: var(--text); font-weight: 500; }
   .about-badges { grid-template-columns: 1fr; }
   .hero__actions { flex-direction: column; }
   .btn { width: 100%; justify-content: center; }
+}
+
+/* =========================================
+   ARTICLE / GUIDE CONTENT (blog, FAQ)
+   Възстановява четимостта, която глобалният reset премахва.
+   ========================================= */
+article.product-description { margin-top: 0; padding-top: 0; border-top: none; }
+
+article.product-description h2 {
+  font-size: 1.9rem;
+  margin: 2.8rem 0 1rem;
+  line-height: 1.2;
+}
+article.product-description h3 {
+  font-size: 1.25rem;
+  margin: 2rem 0 0.8rem;
+  color: var(--text);
+}
+article.product-description p { max-width: none; line-height: 1.75; }
+
+article.product-description ul,
+article.product-description ol {
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin: 0 0 1.4rem;
+  color: var(--muted);
+}
+article.product-description ol { list-style: decimal; }
+article.product-description li {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 0.55rem;
+}
+article.product-description li::marker { color: var(--gold); }
+
+/* Вътрешните връзки трябва да се виждат */
+article.product-description a,
+.value-card a {
+  color: var(--gold-dk);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: color var(--transition);
+}
+article.product-description a:hover,
+.value-card a:hover { color: var(--gold); }
+
+article.product-description .specs-table { margin: 1.5rem 0 2rem; width: 100%; }
+article.product-description .specs-table a { text-decoration: none; }
+article.product-description .specs-table a:hover { text-decoration: underline; }
+
+article.product-description .price-note { margin-top: -1rem; margin-bottom: 2rem; }
+
+/* Таблиците да не чупят layout-а на телефон */
+@media (max-width: 640px) {
+  article.product-description .specs-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }

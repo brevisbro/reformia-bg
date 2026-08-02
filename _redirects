@@ -1,6 +1,12 @@
-# Каноничен хост: apex без www (премахва дублирано съдържание)
-https://www.thereformiabg.com/* https://thereformiabg.com/:splat 301!
+# Cloudflare Pages _redirects
+#
+# ВАЖНО: Pages съпоставя само ПЪТИЩА тук, не хостове. Пренасочването
+# www -> apex НЕ може да се направи в този файл; изисква Redirect Rule
+# на ниво зона в Cloudflare (Rules -> Redirect Rules).
+# Дотогава каноничният таг на всяка страница сочи към apex домейна,
+# което е достатъчно за консолидация в търсачките.
 
-# Стари/алтернативни пътища
 /index /  301
 /index.html /  301
+/home /  301
+/nachalo /  301

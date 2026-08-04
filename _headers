@@ -5,6 +5,10 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   Permissions-Policy: geolocation=(), microphone=(), camera=()
 
+# ВНИМАНИЕ: css и js са immutable за една година, а имената им не се менят.
+# Затова всяка промяна в тях изисква вдигане на ?v=… в <link>/<script> на
+# всички страници — иначе браузърите и edge кешът продължават да сервират
+# стария файл и промяната не стига до никого.
 /css/*
   Cache-Control: public, max-age=31536000, immutable
 

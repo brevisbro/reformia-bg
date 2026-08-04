@@ -18,6 +18,15 @@
     <priority>0.9</priority>
   </url>
 
+  <url>
+    <loc>https://thereformiabg.com/planer</loc>
+    <xhtml:link rel="alternate" hreflang="bg-BG" href="https://thereformiabg.com/planer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thereformiabg.com/planer"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Продукти -->
   <url>
     <loc>https://thereformiabg.com/products/reformer-onyx-sgavaem</loc>

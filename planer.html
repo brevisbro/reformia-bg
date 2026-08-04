@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Студио Планер — начертайте пилатес студиото си онлайн | REFORMIA</title>
+<meta name="description" content="Безплатен планер за пилатес студио: задайте размерите на залата, подредете реформъри, Кадилак, Уунда стол и барел, вижте дали остава място за безопасна тренировка и получете цената веднага.">
+<link rel="canonical" href="https://thereformiabg.com/planer">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="geo.region" content="BG">
+<link rel="alternate" hreflang="bg-BG" href="https://thereformiabg.com/planer">
+<link rel="alternate" hreflang="x-default" href="https://thereformiabg.com/planer">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="REFORMIA">
+<meta property="og:locale" content="bg_BG">
+<meta property="og:title" content="Студио Планер — начертайте пилатес студиото си онлайн">
+<meta property="og:description" content="Задайте размерите на залата, подредете оборудването и вижте капацитета, цената и възвръщаемостта. Безплатно, без регистрация.">
+<meta property="og:url" content="https://thereformiabg.com/planer">
+<meta property="og:image" content="https://thereformiabg.com/images/planer/onyx.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://thereformiabg.com/planer#app",
+      "name": "REFORMIA Студио Планер",
+      "url": "https://thereformiabg.com/planer",
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "Уеб браузър",
+      "inLanguage": "bg-BG",
+      "description": "Планировчик за пилатес студио: задаване на размерите на помещението, разполагане на реформъри и уреди, проверка на отстоянията за безопасна тренировка и изчисляване на цена и капацитет.",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "featureList": [
+        "Задаване на размери и Г-образна форма на помещението",
+        "Разполагане на 8 модела пилатес оборудване с реални размери",
+        "Проверка на отстоянието 3 × 1,6 м за безопасна тренировка",
+        "Автоматично подреждане с максимален капацитет",
+        "Изчисляване на цена без и с ДДС",
+        "Разчет на възвръщаемост на оборудването",
+        "Изтегляне на чертежа и изпращане на запитване"
+      ],
+      "publisher": { "@id": "https://thereformiabg.com/#organization" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://thereformiabg.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Студио Планер", "item": "https://thereformiabg.com/planer" }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#0F0F0D;
+  --ink-2:#1A1815;
+  --ink-3:#2A2620;
+  --gold:#A67C3A;
+  --gold-lt:#C9A96E;
+  --sheet:#F4F1EB;
+  --sheet-2:#EAE5DA;
+  --rule:#D8D2C4;
+  --alert:#C1502E;
+  --sage:#6E7F5B;
+  --paper:#FAFAF8;
+  --mute:#8A8172;
+
+  --display:'Cormorant Garamond',Georgia,serif;
+  --ui:'Montserrat',system-ui,"Helvetica Neue",Arial,sans-serif;
+  --mono:Menlo,"DejaVu Sans Mono",Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:var(--ui);font-size:13px;line-height:1.45;
+  background:var(--ink);color:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  overflow:hidden;
+}
+button,input,select{font-family:inherit;font-size:inherit;color:inherit}
+button{cursor:pointer;background:none;border:none}
+:focus-visible{outline:2px solid var(--gold-lt);outline-offset:2px}
+
+/* ─────────── shell ─────────── */
+.app{display:grid;grid-template-rows:auto 1fr auto;height:100%}
+
+.topbar{
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+  padding:11px 18px;background:var(--ink);
+  border-bottom:1px solid var(--ink-3);
+}
+.wordmark{font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:.32em;color:var(--gold-lt)}
+.topbar .sep{width:1px;height:20px;background:var(--ink-3)}
+.topbar h1{font-family:var(--ui);font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
+.topbar .spacer{flex:1}
+
+.btn{
+  padding:8px 15px;border:1px solid var(--ink-3);border-radius:2px;
+  font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--paper);transition:border-color .15s,background .15s,color .15s;
+}
+.btn:hover{border-color:var(--gold);color:var(--gold-lt)}
+.btn.solid{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.btn.solid:hover{background:var(--gold-lt);border-color:var(--gold-lt);color:var(--ink)}
+.btn.sm{padding:5px 10px;font-size:10px}
+.btn:disabled{opacity:.35;cursor:default}
+.btn:disabled:hover{border-color:var(--ink-3);color:var(--paper)}
+
+.main{display:grid;grid-template-columns:236px 1fr 264px;min-height:0}
+.main > *{min-width:0}
+
+/* ─────────── panels ─────────── */
+.panel{background:var(--ink-2);overflow-y:auto;padding:16px 15px 30px}
+.panel.left{border-right:1px solid var(--ink-3)}
+.panel.right{border-left:1px solid var(--ink-3)}
+.panel::-webkit-scrollbar{width:8px}
+.panel::-webkit-scrollbar-thumb{background:var(--ink-3);border-radius:4px}
+
+.sect{margin-bottom:22px}
+.sect > h2{
+  font-size:9.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);padding-bottom:6px;margin-bottom:10px;
+  border-bottom:1px solid var(--ink-3);
+  display:flex;align-items:baseline;gap:7px;
+}
+.sect > h2 .hint{margin-left:auto;font-weight:400;letter-spacing:.05em;text-transform:none;color:var(--mute);font-size:10px}
+
+.field{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.field label{flex:1;font-size:11.5px;color:#B8B1A4}
+.field input[type=number]{
+  width:66px;padding:5px 7px;text-align:right;
+  font-family:var(--mono);font-size:11.5px;
+  background:var(--ink);border:1px solid var(--ink-3);border-radius:2px;color:var(--gold-lt);
+}
+.field input[type=number]:focus{border-color:var(--gold)}
+.field select{
+  flex:none;width:132px;padding:5px 6px;font-size:11px;
+  background:var(--ink);border:1px solid var(--ink-3);border-radius:2px;color:var(--gold-lt);
+}
+.field select:focus{border-color:var(--gold)}
+.preset.dead{opacity:.42;border-left-color:var(--mute);cursor:default}
+.preset.dead:hover{border-color:var(--ink-3);border-left-color:var(--mute)}
+.preset .pl{display:flex;align-items:baseline;gap:6px;margin-top:1px}
+.preset .pl span{font-family:var(--mono);font-size:9.5px;color:var(--mute)}
+.preset .pl .money{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--gold-lt)}
+.field .unit{width:22px;font-family:var(--mono);font-size:10.5px;color:var(--mute)}
+
+.seg{display:flex;gap:0;border:1px solid var(--ink-3);border-radius:2px;overflow:hidden;margin-bottom:9px}
+.seg button{flex:1;padding:6px 4px;font-size:10.5px;letter-spacing:.05em;color:#B8B1A4;border-right:1px solid var(--ink-3)}
+.seg button:last-child{border-right:none}
+.seg button[aria-pressed=true]{background:var(--gold);color:var(--ink);font-weight:600}
+
+/* catalogue */
+.cat-group{margin-bottom:12px}
+.cat-group h3{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
+.prod{
+  display:flex;align-items:center;gap:8px;width:100%;text-align:left;
+  padding:6px 7px;margin-bottom:4px;
+  background:var(--ink);border:1px solid var(--ink-3);border-radius:2px;
+  transition:border-color .15s,transform .12s;
+}
+.prod:hover{border-color:var(--gold);transform:translateX(2px)}
+.prod .shot{flex:none;width:40px;height:29px;object-fit:contain;object-position:center}
+.prod .glyph{flex:none;width:26px;height:18px;border:1.5px solid var(--gold-lt);border-radius:1px;position:relative}
+.prod .glyph::after{content:"";position:absolute;left:1.5px;top:2px;bottom:2px;width:3px;background:var(--gold-lt);opacity:.75}
+.prod .glyph.sq{width:18px;height:18px}
+.prod .glyph.sq::after{display:none}
+.prod .glyph.wide{width:26px;height:14px}
+.prod .txt{flex:1;min-width:0;display:flex;flex-direction:column}
+.prod .nm{display:block;font-size:11px;font-weight:600;color:var(--paper);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prod .dim{display:block;font-family:var(--mono);font-size:9.5px;color:var(--mute)}
+.prod .pr{font-family:var(--mono);font-size:11px;color:var(--gold-lt);flex:none;white-space:nowrap}
+.prod .dim em{font-style:normal;color:var(--gold);cursor:help}
+
+.preset{
+  display:block;width:100%;text-align:left;padding:8px 9px;margin-bottom:5px;
+  background:var(--ink);border:1px solid var(--ink-3);border-left:2px solid var(--gold);border-radius:2px;
+  transition:border-color .15s;
+}
+.preset:hover{border-color:var(--gold);border-left-color:var(--gold-lt)}
+.preset b{display:block;font-size:11.5px;font-weight:600}
+.preset span{font-family:var(--mono);font-size:9.5px;color:var(--mute)}
+
+/* ─────────── drawing sheet ─────────── */
+.stage{
+  position:relative;min-width:0;overflow:auto;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(166,124,58,.07),transparent 62%),
+    var(--ink);
+  display:flex;align-items:center;justify-content:center;padding:34px 40px 30px;
+}
+.stage::-webkit-scrollbar{width:9px;height:9px}
+.stage::-webkit-scrollbar-thumb{background:var(--ink-3);border-radius:5px}
+
+.sheetwrap{position:relative;flex:none;margin:auto}
+
+/* dimension lines */
+.dim-x,.dim-y{position:absolute;color:var(--gold-lt);font-family:var(--mono);font-size:10.5px;letter-spacing:.02em}
+.dim-x{left:0;right:0;top:-24px;height:16px}
+.dim-y{top:0;bottom:0;left:-30px;width:16px}
+.dim-x::before,.dim-x::after{content:"";position:absolute;top:50%;width:1px;height:11px;background:var(--gold);transform:translateY(-50%);opacity:.75}
+.dim-x::before{left:0}.dim-x::after{right:0}
+.dim-y::before,.dim-y::after{content:"";position:absolute;left:50%;height:1px;width:11px;background:var(--gold);transform:translateX(-50%);opacity:.75}
+.dim-y::before{top:0}.dim-y::after{bottom:0}
+.dim-x .rule{position:absolute;top:50%;left:0;right:0;height:1px;background:var(--gold);opacity:.4}
+.dim-y .rule{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--gold);opacity:.4}
+.dim-x .v,.dim-y .v{position:absolute;background:var(--ink);padding:0 6px}
+.dim-x .v{left:50%;top:50%;transform:translate(-50%,-50%)}
+.dim-y .v{left:50%;top:50%;transform:translate(-50%,-50%) rotate(-90deg);white-space:nowrap}
+
+.floor{
+  position:relative;background:var(--sheet);
+  box-shadow:0 18px 46px rgba(0,0,0,.55);
+  cursor:crosshair;touch-action:none;
+}
+.floor .grid{position:absolute;inset:0;pointer-events:none}
+.floor .wall{position:absolute;inset:0;border:2px solid var(--ink);pointer-events:none}
+.floor.notched .wall{display:none}
+.notch-edge{position:absolute;pointer-events:none}
+
+/* items */
+.item{
+  position:absolute;transform-origin:center center;
+  display:flex;align-items:center;justify-content:center;
+  cursor:grab;touch-action:none;
+  transition:filter .12s;
+}
+.item.dragging{cursor:grabbing;z-index:40}
+.item .zone{
+  position:absolute;inset:0;border:1px dashed rgba(110,127,91,.65);
+  background:repeating-linear-gradient(45deg,rgba(110,127,91,.13) 0 5px,transparent 5px 11px);
+}
+.item.bad .zone{border-color:rgba(193,80,46,.8);background:repeating-linear-gradient(45deg,rgba(193,80,46,.17) 0 5px,transparent 5px 11px)}
+.item.nozone .zone{display:none}
+.item .body{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  background:var(--paper);border:1.5px solid var(--ink);
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.item .body::before{ /* head-end marker: the footbar */
+  content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold);
+}
+.item.err .body{border-color:var(--alert);background:#FBECE7}
+.item.sel .body{border-width:2.5px;box-shadow:0 0 0 2px rgba(166,124,58,.55)}
+.item .tag{
+  font-family:var(--mono);font-size:9px;letter-spacing:.02em;color:var(--ink-3);
+  white-space:nowrap;pointer-events:none;padding-left:5px;
+}
+.item.rot90 .tag,.item.rot270 .tag{transform:rotate(-90deg)}
+.item.rot180 .tag{transform:rotate(180deg)}
+.item.fixture .body{background:var(--sheet-2);border-style:dashed}
+.item.fixture .body::before{display:none}
+
+.scalebar{margin-top:12px;display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;color:var(--mute)}
+.scalebar .bar{height:5px;border:1px solid var(--gold);position:relative;background:linear-gradient(90deg,var(--gold) 50%,transparent 50%)}
+.emptyhint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;color:#9A9384}
+.emptyhint b{display:block;font-family:var(--display);font-weight:600;font-size:21px;color:#6E675A;margin-bottom:4px}
+.emptyhint span{font-size:11.5px}
+
+/* floating toolbar */
+.tools{
+  position:absolute;left:50%;bottom:14px;transform:translateX(-50%);
+  display:flex;gap:1px;background:var(--ink-3);border:1px solid var(--ink-3);border-radius:3px;
+  box-shadow:0 8px 24px rgba(0,0,0,.5);overflow:hidden;z-index:60;
+}
+.tools button{padding:8px 12px;background:var(--ink-2);font-size:11px;letter-spacing:.05em;color:#B8B1A4}
+.tools button:hover:not(:disabled){background:var(--gold);color:var(--ink)}
+.tools button:disabled{opacity:.3;cursor:default}
+
+/* ─────────── title block ─────────── */
+.tblock{border:1px solid var(--ink-3);border-radius:2px;overflow:hidden;margin-bottom:16px}
+.tblock .cap{
+  padding:7px 11px;background:var(--ink);
+  font-size:9.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
+  border-bottom:1px solid var(--ink-3);
+}
+.tblock .row{display:flex;align-items:baseline;gap:8px;padding:6px 11px;border-bottom:1px solid var(--ink-3)}
+.tblock .row:last-child{border-bottom:none}
+.tblock .row .k{flex:1;font-size:10.5px;color:#B8B1A4}
+.tblock .row .v{font-family:var(--mono);font-size:12.5px;color:var(--paper)}
+.tblock .row.total{background:var(--ink);padding-top:9px;padding-bottom:9px}
+.tblock .row.total .k{font-size:11px;color:var(--gold-lt);font-weight:600}
+.tblock .row.total .v{font-family:var(--display);font-weight:600;font-size:23px;color:var(--gold-lt)}
+.tblock .row.sub .v{color:var(--mute);font-size:11.5px}
+
+.prev{display:flex;gap:11px;align-items:center;padding:10px 11px}
+.prev img{width:88px;height:62px;object-fit:contain;flex:none}
+.prev .meta{min-width:0}
+.prev .meta b{display:block;font-size:12px;color:var(--paper);line-height:1.25}
+.prev .meta span{display:block;font-family:var(--mono);font-size:10.5px;color:var(--mute);margin-top:2px}
+.prev .meta #prevPrice{color:var(--gold-lt);font-size:12px}
+
+.speclist{font-family:var(--mono);font-size:11px;color:#B8B1A4}
+.speclist div{display:flex;gap:7px;padding:3.5px 0;border-bottom:1px dotted var(--ink-3)}
+.speclist div:last-child{border-bottom:none}
+.speclist .q{color:var(--gold-lt);width:24px;flex:none}
+.speclist .n{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.speclist .empty{color:var(--mute);font-style:italic;border:none}
+
+.notes .note{
+  display:flex;gap:8px;padding:8px 10px;margin-bottom:5px;border-radius:2px;
+  font-size:11px;line-height:1.4;border-left:2px solid;
+}
+.note.warn{background:rgba(193,80,46,.1);border-color:var(--alert);color:#EBBCAB}
+.note.soft{background:rgba(110,127,91,.11);border-color:var(--sage);color:#C2CEB4}
+.note.ok{background:rgba(166,124,58,.1);border-color:var(--gold);color:var(--gold-lt)}
+.note .ic{flex:none;font-family:var(--mono);font-weight:700}
+
+/* ─────────── ROI band ─────────── */
+.roi{
+  display:flex;align-items:stretch;gap:0;
+  background:var(--ink-2);border-top:1px solid var(--ink-3);
+}
+.roi .lead{
+  display:flex;align-items:center;gap:11px;padding:12px 18px;border-right:1px solid var(--ink-3);flex:none;
+}
+.roi .lead h2{font-family:var(--display);font-weight:600;font-size:17px;color:var(--gold-lt);white-space:nowrap}
+.roi .lead p{font-size:10.5px;color:var(--mute);max-width:168px;line-height:1.35}
+.roi .knobs{display:flex;align-items:center;gap:16px;padding:12px 18px;border-right:1px solid var(--ink-3);flex-wrap:wrap}
+.knob{display:flex;flex-direction:column;gap:3px;min-width:104px}
+.knob label{font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--mute)}
+.knob .kv{display:flex;align-items:baseline;gap:5px}
+.knob input[type=range]{width:104px;accent-color:var(--gold);height:3px}
+.knob b{font-family:var(--mono);font-size:12.5px;color:var(--gold-lt)}
+.roi .out{display:flex;align-items:center;gap:24px;padding:12px 22px;flex:1;justify-content:flex-end}
+.stat{text-align:right}
+.stat .v{font-family:var(--display);font-weight:600;font-size:27px;color:var(--paper);line-height:1.1;display:block}
+.stat .v em{font-style:normal;font-size:13px;color:var(--mute)}
+.stat .k{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);display:block;margin-top:2px}
+.stat.hero .v{color:var(--gold-lt);font-size:34px}
+
+/* ─────────── modal ─────────── */
+.scrim{
+  position:fixed;inset:0;background:rgba(5,5,4,.8);backdrop-filter:blur(3px);
+  display:none;align-items:center;justify-content:center;padding:24px;z-index:200;
+}
+.scrim.on{display:flex}
+.modal{
+  width:min(720px,100%);max-height:88vh;overflow-y:auto;
+  background:var(--ink-2);border:1px solid var(--ink-3);border-radius:3px;
+  box-shadow:0 30px 80px rgba(0,0,0,.7);
+}
+.modal header{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--ink-3)}
+.modal header h2{font-family:var(--display);font-weight:600;font-size:24px;color:var(--gold-lt);flex:1}
+.modal .bd{padding:18px 20px}
+.modal .ft{display:flex;gap:9px;justify-content:flex-end;padding:14px 20px;border-top:1px solid var(--ink-3);flex-wrap:wrap}
+.frm{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px}
+.frm .full{grid-column:1/-1}
+.frm label{display:block;font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
+.frm input,.frm textarea{
+  width:100%;padding:8px 10px;background:var(--ink);border:1px solid var(--ink-3);border-radius:2px;
+  color:var(--paper);font-size:12.5px;
+}
+.frm input:focus,.frm textarea:focus{border-color:var(--gold)}
+.frm textarea{resize:vertical;min-height:58px}
+.summary{
+  font-family:var(--mono);font-size:11px;line-height:1.55;white-space:pre-wrap;
+  background:var(--ink);border:1px solid var(--ink-3);border-radius:2px;
+  padding:12px 13px;max-height:210px;overflow-y:auto;color:#B8B1A4;
+}
+.toast{
+  position:fixed;left:50%;bottom:26px;transform:translate(-50%,14px);
+  background:var(--gold);color:var(--ink);font-size:11.5px;font-weight:600;letter-spacing:.05em;
+  padding:9px 18px;border-radius:2px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:300;
+}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:1180px){
+  .main{grid-template-columns:212px 1fr 236px}
+  .roi .knobs{gap:12px}
+}
+@media (max-width:900px){
+  body{overflow:auto}
+  .app{height:auto;grid-template-rows:auto auto auto}
+  .main{grid-template-columns:1fr;grid-template-rows:auto auto auto}
+  /* планът първо — заради него е страницата */
+  .stage{order:-1;height:56vh;min-height:320px;padding:26px 14px;overflow:auto}
+  .panel.left{order:0}
+  .panel.right{order:1}
+  .panel.left,.panel.right{border:none;border-top:1px solid var(--ink-3);max-height:none}
+  .topbar{gap:10px}
+  .topbar h1,.topbar .sep{display:none}
+  .topbar .btn{flex:1;min-width:96px;text-align:center}
+  #catalogue{display:grid;grid-template-columns:1fr 1fr;gap:0 8px}
+  .cat-group{grid-column:1/-1}
+  .cat-group:has(.prod){display:grid;grid-template-columns:1fr 1fr;gap:0 8px}
+  .cat-group h3{grid-column:1/-1}
+  /* на тесен екран лентата стои под чертежа, не върху него */
+  .stage{display:block}
+  .sheetwrap{margin:0 auto}
+  .tools{position:static;transform:none;flex-wrap:wrap;justify-content:center;margin:16px auto 0;width:max-content;max-width:100%}
+  .dim-y{left:-26px}
+  .roi{flex-direction:column}
+  .roi .lead,.roi .knobs{border-right:none;border-bottom:1px solid var(--ink-3)}
+  .roi .knobs{justify-content:space-between}
+  .roi .out{justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .frm{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <div class="topbar">
+    <a class="wordmark" href="/" title="Към сайта на REFORMIA">REFORMIA</a>
+    <span class="sep"></span>
+    <h1>Студио Планер</h1>
+    <span class="spacer"></span>
+    <button class="btn sm" id="btnShare">Копирай линк</button>
+    <button class="btn sm" id="btnPng">Свали чертеж</button>
+    <button class="btn solid" id="btnAsk">Изпрати запитване</button>
+  </div>
+
+  <div class="main">
+
+    <!-- ══════════ LEFT ══════════ -->
+    <aside class="panel left">
+      <div class="sect">
+        <h2>Помещение</h2>
+        <div class="field">
+          <label for="rw">Ширина</label>
+          <input type="number" id="rw" min="2" max="30" step="0.1" value="7">
+          <span class="unit">м</span>
+        </div>
+        <div class="field">
+          <label for="rh">Дълбочина</label>
+          <input type="number" id="rh" min="2" max="30" step="0.1" value="5">
+          <span class="unit">м</span>
+        </div>
+        <div class="seg" role="group" aria-label="Форма на помещението">
+          <button id="shapeRect" aria-pressed="true">Правоъгълно</button>
+          <button id="shapeL" aria-pressed="false">Г-образно</button>
+        </div>
+        <div id="notchBox" hidden>
+          <div class="field">
+            <label for="nw">Отрязък — ширина</label>
+            <input type="number" id="nw" min="0.3" max="20" step="0.1" value="2">
+            <span class="unit">м</span>
+          </div>
+          <div class="field">
+            <label for="nh">Отрязък — дълбочина</label>
+            <input type="number" id="nh" min="0.3" max="20" step="0.1" value="1.5">
+            <span class="unit">м</span>
+          </div>
+          <div class="seg" role="group" aria-label="Ъгъл на отрязъка">
+            <button data-corner="tl" aria-pressed="true">◤</button>
+            <button data-corner="tr" aria-pressed="false">◥</button>
+            <button data-corner="bl" aria-pressed="false">◣</button>
+            <button data-corner="br" aria-pressed="false">◢</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sect">
+        <h2>Каталог <span class="hint">натисни, за да добавиш</span></h2>
+        <div id="catalogue"></div>
+      </div>
+
+      <div class="sect">
+        <h2>Планове за помещението <span class="hint" id="planHint"></span></h2>
+        <div class="field" style="margin-bottom:9px">
+          <label for="prefModel">Реформър</label>
+          <select id="prefModel"></select>
+        </div>
+        <div id="presets"></div>
+      </div>
+    </aside>
+
+    <!-- ══════════ STAGE ══════════ -->
+    <div class="stage" id="stage">
+      <div class="sheetwrap" id="sheetwrap">
+        <div class="dim-x"><span class="rule"></span><span class="v" id="dimX">7000</span></div>
+        <div class="dim-y"><span class="rule"></span><span class="v" id="dimY">5000</span></div>
+        <div class="floor" id="floor">
+          <div class="grid" id="grid"></div>
+          <div class="wall"></div>
+        </div>
+        <div class="scalebar"><span class="bar" id="scaleBar"></span><span>1 метър</span><span style="margin-left:auto" id="scaleTxt">М 1:50</span></div>
+      </div>
+
+      <div class="tools">
+        <button id="tRot" disabled>Завърти</button>
+        <button id="tFold" disabled>Сгъни</button>
+        <button id="tDup" disabled>Дублирай</button>
+        <button id="tDel" disabled>Изтрий</button>
+        <button id="tAuto">Подреди автоматично</button>
+        <button id="tClear">Изчисти</button>
+      </div>
+    </div>
+
+    <!-- ══════════ RIGHT ══════════ -->
+    <aside class="panel right">
+      <div class="tblock" id="prevCard" hidden>
+        <div class="cap">Избран уред</div>
+        <div class="prev">
+          <img id="prevImg" alt="">
+          <div class="meta">
+            <b id="prevName"></b>
+            <span id="prevDim"></span>
+            <span id="prevPrice"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tblock">
+        <div class="cap">Титулна клетка</div>
+        <div class="row"><span class="k">Площ на помещението</span><span class="v" id="mArea">35,0 м²</span></div>
+        <div class="row"><span class="k">Заета от уреди</span><span class="v" id="mFill">0 %</span></div>
+        <div class="row"><span class="k">Работни места</span><span class="v" id="mSeats">0</span></div>
+        <div class="row total"><span class="k">Без ДДС</span><span class="v" id="mNet">€0</span></div>
+        <div class="row sub"><span class="k">С ДДС 20%</span><span class="v" id="mGross">€0</span></div>
+        <div class="row sub"><span class="k">Доставка</span><span class="v">включена</span></div>
+      </div>
+
+      <div class="sect">
+        <h2>Спецификация</h2>
+        <div class="speclist" id="spec"><div class="empty">Още няма добавени уреди.</div></div>
+      </div>
+
+      <div class="sect">
+        <h2>Проверка на плана</h2>
+        <div class="notes" id="notes"></div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ══════════ ROI ══════════ -->
+  <div class="roi">
+    <div class="lead">
+      <div>
+        <h2>Възвръщаемост</h2>
+        <p>Брутен оборот от заетите места. Без наем, заплати и консумативи.</p>
+      </div>
+    </div>
+    <div class="knobs">
+      <div class="knob">
+        <label for="kSess">Сесии на ден</label>
+        <div class="kv"><b id="vSess">5</b></div>
+        <input type="range" id="kSess" min="1" max="12" step="1" value="5">
+      </div>
+      <div class="knob">
+        <label for="kPrice">Цена на човек</label>
+        <div class="kv"><b id="vPrice">€18</b></div>
+        <input type="range" id="kPrice" min="5" max="60" step="1" value="18">
+      </div>
+      <div class="knob">
+        <label for="kFill">Запълване</label>
+        <div class="kv"><b id="vFill">70%</b></div>
+        <input type="range" id="kFill" min="20" max="100" step="5" value="70">
+      </div>
+      <div class="knob">
+        <label for="kDays">Работни дни</label>
+        <div class="kv"><b id="vDays">24</b></div>
+        <input type="range" id="kDays" min="10" max="30" step="1" value="24">
+      </div>
+    </div>
+    <div class="out">
+      <div class="stat"><span class="v" id="oDay">€0</span><span class="k">на ден</span></div>
+      <div class="stat"><span class="v" id="oMonth">€0</span><span class="k">на месец</span></div>
+      <div class="stat hero"><span class="v" id="oPayback">—</span><span class="k">изплащане на оборудването</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ INQUIRY ══════════ -->
+<div class="scrim" id="scrim">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <header>
+      <h2 id="mTitle">Изпрати плана за оферта</h2>
+      <button class="btn sm" id="mClose">Затвори</button>
+    </header>
+    <div class="bd">
+      <div class="frm">
+        <div><label for="fName">Име</label><input id="fName" autocomplete="name"></div>
+        <div><label for="fPhone">Телефон</label><input id="fPhone" autocomplete="tel" placeholder="+359"></div>
+        <div><label for="fMail">Имейл</label><input id="fMail" type="email" autocomplete="email"></div>
+        <div><label for="fCity">Град</label><input id="fCity" autocomplete="address-level2"></div>
+        <div class="full"><label for="fNote">Бележка</label><textarea id="fNote" placeholder="Предпочитан цвят, брандиране с лого, срок…"></textarea></div>
+      </div>
+      <label style="display:block;font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);margin-bottom:6px">Какво заминава заедно със запитването</label>
+      <div class="summary" id="mSummary"></div>
+    </div>
+    <div class="ft">
+      <button class="btn" id="mCopy">Копирай текста</button>
+      <button class="btn" id="mPng">Свали чертежа</button>
+      <button class="btn solid" id="mSend">Отвори имейла</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+
+/* Изрязани от снимките на сайта (черният вариант на всеки модел). */
+const IMG = {
+  onyx :'/images/planer/onyx.webp',
+  byal :'/images/planer/byal.webp',
+  sglob:'/images/planer/sglob.webp',
+  dab  :'/images/planer/dab.webp',
+  klen :'/images/planer/klen.webp',
+  kadi :'/images/planer/kadi.webp',
+  wunda:'/images/planer/wunda.webp',
+  barel:'/images/planer/barel.webp'
+};
+
+/* ════════════════════════════════════════════════════
+   Каталог. Размерите са сверени с продуктовите
+   страници. Единствено Белият сгъваем няма публикуван
+   размер — приет е този на M8 и е маркиран с approx.
+   ════════════════════════════════════════════════════ */
+const PRODUCTS = [
+  {id:'onyx', code:'ОН',  name:'Оникс Сгъваем Реформър M8', short:'Оникс M8',   group:'Реформъри', price:1700, w:2370, d:680, fw:1350, fd:680, foldable:true,  zone:[3000,1600], seat:1},
+  {id:'byal', code:'БЯЛ',  name:'Бял Сгъваем Реформър',      short:'Бял сгъваем', group:'Реформъри', price:1700, w:2370, d:680, fw:1350, fd:680, foldable:true,  zone:[3000,1600], seat:1, approx:true},
+  {id:'sglob', code:'СГЛ', name:'Дървен Сглобяем Реформър',  short:'Сглобяем',   group:'Реформъри', price:1600, w:2415, d:660, fw:1350, fd:950, foldable:true,  zone:[3000,1600], seat:1},
+  {id:'dab', code:'ДЪБ',   name:'Дървен Реформър — Дъб',     short:'Дъб',group:'Реформъри', price:1900, w:2400, d:740, foldable:false, zone:[3000,1600], seat:1},
+  {id:'klen', code:'КЛН',  name:'Реформър от Клен',          short:'Клен',group:'Реформъри',price:2000, w:2400, d:740, foldable:false, zone:[3000,1600], seat:1},
+  {id:'kadi', code:'КАД',  name:'Кадилак Реформър от Клен',  short:'Кадилак',    group:'Кадилак',   price:2900, w:2540, d:720, foldable:false, zone:[3200,1800], seat:1},
+  {id:'wunda', code:'УС', name:'Уунда Стол',                short:'Уунда стол', group:'Стол и барел',price:830, w:790,  d:690, foldable:false, zone:[2000,1800], seat:1, glyph:'sq'},
+  {id:'barel', code:'БР', name:'Барел от Клен',             short:'Барел',      group:'Стол и барел',price:830, w:1100, d:800, foldable:false, zone:[2200,1800], seat:1, glyph:'wide'},
+  {id:'door', code:'ВР',  name:'Врата',                     short:'Врата',      group:'Елементи',  price:0, w:900, d:150, foldable:false, zone:[1000,1100], seat:0, fixture:true, glyph:'wide'},
+  {id:'col', code:'К',   name:'Колона / препятствие',      short:'Колона',     group:'Елементи',  price:0, w:400, d:400, foldable:false, zone:null,        seat:0, fixture:true, glyph:'sq'},
+];
+const P = Object.fromEntries(PRODUCTS.map(p=>[p.id,p]));
+
+const VAT = 0.20, SNAP = 50, GRID = 500;
+
+/* ─────────── state ─────────── */
+let S = {
+  room:{w:7000, h:5000, notch:null},
+  items:[],
+  roi:{sess:5, price:18, fill:70, days:24}
+};
+let sel = null, scale = 0.06, undoStack = [];
+
+const $ = s => document.querySelector(s);
+/* локалът bg-BG не е гарантиран навсякъде — групираме сами */
+const group = n => String(Math.round(Math.abs(n))).replace(/\B(?=(\d{3})+(?!\d))/g,'\u2009');
+const fmt = n => '\u20ac' + group(n);
+const num = (n,d=1) => n.toFixed(d).replace('.',',');
+const seatWord = n => n === 1 ? '1 място' : n + ' места';
+const uid = () => Math.random().toString(36).slice(2,9);
+
+/* ─────────── geometry ─────────── */
+function dims(it){
+  const p = P[it.pid];
+  let w = it.folded && p.foldable ? p.fw : p.w;
+  let d = it.folded && p.foldable ? p.fd : p.d;
+  if(it.rot===90||it.rot===270) [w,d] = [d,w];
+  return [w,d];
+}
+function zoneDims(it){
+  const p = P[it.pid];
+  if(!p.zone) return dims(it);
+  let [w,d] = p.zone;
+  if(it.folded && p.foldable) return dims(it);       // сгънат уред не заема работна зона
+  if(it.rot===90||it.rot===270) [w,d] = [d,w];
+  return [w,d];
+}
+const box = (cx,cy,w,h) => ({x:cx-w/2, y:cy-h/2, x2:cx+w/2, y2:cy+h/2});
+const rect = it => box(it.cx, it.cy, ...dims(it));
+const zrect = it => box(it.cx, it.cy, ...zoneDims(it));
+const overlap = (a,b) => a.x < b.x2-1 && a.x2 > b.x+1 && a.y < b.y2-1 && a.y2 > b.y+1;
+
+function notchRect(){
+  const n = S.room.notch; if(!n) return null;
+  const {w:RW,h:RH} = S.room;
+  const x = (n.corner==='tr'||n.corner==='br') ? RW-n.w : 0;
+  const y = (n.corner==='bl'||n.corner==='br') ? RH-n.h : 0;
+  return {x, y, x2:x+n.w, y2:y+n.h};
+}
+function insideRoom(r){
+  const {w:RW,h:RH} = S.room;
+  if(r.x < -1 || r.y < -1 || r.x2 > RW+1 || r.y2 > RH+1) return false;
+  const n = notchRect();
+  return !(n && overlap(r,n));
+}
+
+/* ─────────── validation ─────────── */
+function validate(){
+  const issues = [];
+  S.items.forEach(it => { it._err = false; it._bad = false; });
+
+  S.items.forEach((it,i) => {
+    const p = P[it.pid], r = rect(it);
+    if(!insideRoom(r)){ it._err = true; issues.push({t:'warn', m:`${p.short} излиза извън помещението.`}); }
+    for(let j=i+1;j<S.items.length;j++){
+      if(overlap(r, rect(S.items[j]))){
+        it._err = S.items[j]._err = true;
+        issues.push({t:'warn', m:`${p.short} и ${P[S.items[j].pid].short} се застъпват.`});
+      }
+    }
+  });
+
+  S.items.forEach(it => {
+    const p = P[it.pid];
+    if(!p.zone || it.fixture || P[it.pid].fixture || (it.folded && p.foldable)) return;
+    const z = zrect(it);
+    if(!insideRoom(z)){ it._bad = true; issues.push({t:'soft', m:`${p.short} е твърде близо до стена — липсва отстояние за безопасна тренировка.`}); }
+    S.items.forEach(o => {
+      if(o===it) return;
+      if(overlap(z, rect(o))){ it._bad = true; issues.push({t:'soft', m:`Тесен работен коридор около ${p.short}.`}); }
+    });
+  });
+
+  // дедупликация
+  const seen = new Set(), out = [];
+  issues.forEach(i => { if(!seen.has(i.m)){ seen.add(i.m); out.push(i); } });
+  return out;
+}
+
+/* ─────────── metrics ─────────── */
+function metrics(){
+  const priced = S.items.filter(i => !P[i.pid].fixture);
+  const net = priced.reduce((s,i) => s + P[i.pid].price, 0);
+  const seats = priced.reduce((s,i) => s + P[i.pid].seat, 0);
+  const area = (S.room.w * S.room.h - (S.room.notch ? S.room.notch.w*S.room.notch.h : 0)) / 1e6;
+  const used = S.items.reduce((s,i) => { const [w,d] = dims(i); return s + w*d/1e6; }, 0);
+  return {net, gross:net*(1+VAT), seats, area, fill: area ? used/area*100 : 0, count:priced.length};
+}
+
+/* Menlo 9px е ~5.4 px на знак; свиваме до код, ако името не се побира */
+function fitLabel(p, boxPx){
+  const room = boxPx - 10;
+  if(p.short.length*5.4 <= room) return p.short;
+  if(p.code.length*5.4 <= room)  return p.code;
+  return '';
+}
+
+/* ─────────── render ─────────── */
+function fitScale(){
+  const st = $('#stage');
+  const narrow = innerWidth <= 900;
+  const availW = Math.max(210, st.clientWidth - (narrow ? 62 : 118));
+  const availH = Math.max(180, st.clientHeight - (narrow ? 150 : 120));
+  scale = Math.min(availW / S.room.w, availH / S.room.h, 0.12);
+}
+
+function render(){
+  fitScale();
+  const {w:RW, h:RH} = S.room;
+  const floor = $('#floor');
+  floor.style.width  = RW*scale + 'px';
+  floor.style.height = RH*scale + 'px';
+
+  // Г-образна стая: изрязваме ъгъла
+  const n = notchRect();
+  floor.classList.toggle('notched', !!n);
+  if(n){
+    const px = v => (v*scale) + 'px';
+    const c = S.room.notch.corner;
+    const pts = {
+      tl:`${px(n.x2)} 0, 100% 0, 100% 100%, 0 100%, 0 ${px(n.y2)}, ${px(n.x2)} ${px(n.y2)}`,
+      tr:`0 0, ${px(n.x)} 0, ${px(n.x)} ${px(n.y2)}, 100% ${px(n.y2)}, 100% 100%, 0 100%`,
+      bl:`0 0, 100% 0, 100% 100%, ${px(n.x2)} 100%, ${px(n.x2)} ${px(n.y)}, 0 ${px(n.y)}`,
+      br:`0 0, 100% 0, 100% ${px(n.y)}, ${px(n.x)} ${px(n.y)}, ${px(n.x)} 100%, 0 100%`
+    }[c];
+    floor.style.clipPath = `polygon(${pts})`;
+    floor.style.outline = 'none';
+    floor.style.boxShadow = '0 18px 46px rgba(0,0,0,.55), inset 0 0 0 2px #0F0F0D';
+  } else {
+    floor.style.clipPath = 'none';
+    floor.style.boxShadow = '0 18px 46px rgba(0,0,0,.55)';
+  }
+
+  const g = GRID*scale;
+  $('#grid').style.background =
+    `repeating-linear-gradient(90deg,var(--rule) 0 1px,transparent 1px ${g}px),`+
+    `repeating-linear-gradient(180deg,var(--rule) 0 1px,transparent 1px ${g}px)`;
+  $('#grid').style.opacity = '.55';
+
+  $('#dimX').textContent = num(RW/1000,2) + ' м';
+  $('#dimY').textContent = num(RH/1000,2) + ' м';
+  $('#scaleBar').style.width = (1000*scale) + 'px';
+  $('#scaleTxt').textContent = 'М 1:' + Math.round(3.7795/scale);
+
+  // елементи
+  [...floor.querySelectorAll('.item')].forEach(e => e.remove());
+  const issues = validate();
+
+  S.items.forEach(it => {
+    const p = P[it.pid];
+    const [zw,zh] = p.zone && !(it.folded && p.foldable) ? p.zone : dims({...it, rot:0});
+    const [bw,bh] = (() => { let w = it.folded&&p.foldable?p.fw:p.w, d = it.folded&&p.foldable?p.fd:p.d; return [w,d]; })();
+
+    const el = document.createElement('div');
+    el.className = 'item rot' + it.rot
+      + (p.zone && !(it.folded&&p.foldable) ? '' : ' nozone')
+      + (p.fixture ? ' fixture' : '')
+      + (it._err ? ' err' : '') + (it._bad ? ' bad' : '')
+      + (sel === it.id ? ' sel' : '');
+    el.dataset.id = it.id;
+    el.style.width  = zw*scale + 'px';
+    el.style.height = zh*scale + 'px';
+    el.style.left = it.cx*scale + 'px';
+    el.style.top  = it.cy*scale + 'px';
+    el.style.transform = `translate(-50%,-50%) rotate(${it.rot}deg)`;
+
+    const zone = document.createElement('div'); zone.className = 'zone';
+    const body = document.createElement('div'); body.className = 'body';
+    body.style.width  = bw*scale + 'px';
+    body.style.height = bh*scale + 'px';
+    const tag = document.createElement('span');
+    tag.className = 'tag';
+    tag.textContent = fitLabel(p, bw*scale);
+    body.appendChild(tag);
+    el.append(zone, body);
+    floor.appendChild(el);
+  });
+
+  $('#floor').querySelector('.emptyhint')?.remove();
+  if(!S.items.length){
+    const h = document.createElement('div');
+    h.className = 'emptyhint';
+    h.innerHTML = '<b>Празно помещение</b><span>Избери уред от каталога вляво</span>';
+    floor.appendChild(h);
+  }
+
+  paintPanels(issues);
+  save();
+}
+
+function paintPanels(issues){
+  const m = metrics();
+  $('#mArea').textContent  = num(m.area,1) + ' м²';
+  $('#mFill').textContent  = Math.round(m.fill) + ' %';
+  $('#mSeats').textContent = m.seats;
+  $('#mNet').textContent   = fmt(m.net);
+  $('#mGross').textContent = fmt(m.gross);
+
+  // спецификация
+  const counts = {};
+  S.items.filter(i => !P[i.pid].fixture).forEach(i => counts[i.pid] = (counts[i.pid]||0)+1);
+  const spec = $('#spec');
+  const keys = Object.keys(counts);
+  spec.innerHTML = keys.length
+    ? keys.map(k => `<div><span class="q">${counts[k]}×</span><span class="n">${P[k].short}</span><span>${fmt(P[k].price*counts[k])}</span></div>`).join('')
+    : '<div class="empty">Още няма добавени уреди.</div>';
+
+  // бележки
+  const notes = $('#notes');
+  if(!S.items.length){
+    notes.innerHTML = '<div class="note ok"><span class="ic">·</span><span>Задай размерите на помещението и добави първия уред.</span></div>';
+  } else if(!issues.length){
+    notes.innerHTML = '<div class="note ok"><span class="ic">✓</span><span>Планът е чист. Всеки уред има пълното отстояние 3 × 1,6 м за безопасна тренировка.</span></div>';
+  } else {
+    notes.innerHTML = issues.slice(0,7).map(i =>
+      `<div class="note ${i.t}"><span class="ic">${i.t==='warn'?'!':'~'}</span><span>${i.m}</span></div>`).join('');
+  }
+
+  // ROI
+  const {sess, price, fill, days} = S.roi;
+  const perDay = m.seats * sess * price * (fill/100);
+  const perMonth = perDay * days;
+  $('#oDay').textContent   = fmt(perDay);
+  $('#oMonth').textContent = fmt(perMonth);
+  $('#oPayback').innerHTML = perMonth > 0 && m.gross > 0
+    ? Math.ceil(m.gross/perMonth) + ' <em>мес.</em>'
+    : '—';
+
+  paintPlans();
+
+  const anySel = S.items.some(i => i.id === sel);
+  const selItem = S.items.find(i => i.id === sel);
+  const card = $('#prevCard');
+  if(selItem && IMG[selItem.pid]){
+    const p = P[selItem.pid];
+    const [w,d] = selItem.folded && p.foldable ? [p.fw,p.fd] : [p.w,p.d];
+    card.hidden = false;
+    $('#prevImg').src = IMG[selItem.pid];
+    $('#prevName').textContent = p.name;
+    $('#prevDim').textContent = `${w} × ${d} мм` + (selItem.folded ? ' (сгънат)' : '') + (p.approx ? ' ~' : '');
+    $('#prevPrice').textContent = p.price ? fmt(p.price) : '';
+  } else card.hidden = true;
+  $('#tRot').disabled = $('#tDel').disabled = $('#tDup').disabled = !anySel;
+  $('#tFold').disabled = !(selItem && P[selItem.pid].foldable);
+  if(selItem && P[selItem.pid].foldable) $('#tFold').textContent = selItem.folded ? 'Разгъни' : 'Сгъни';
+}
+
+/* ─────────── mutations ─────────── */
+function snapshot(){ undoStack.push(JSON.stringify({room:S.room, items:S.items})); if(undoStack.length>60) undoStack.shift(); }
+function undo(){
+  if(!undoStack.length) return;
+  const s = JSON.parse(undoStack.pop());
+  S.room = s.room; S.items = s.items; sel = null; render();
+}
+
+function freeSpot(pid){
+  const p = P[pid];
+  const [zw,zh] = p.zone || [p.w,p.d];
+  for(let y = zh/2; y < S.room.h; y += SNAP*4){
+    for(let x = zw/2; x < S.room.w; x += SNAP*4){
+      const probe = {id:'probe', pid, cx:x, cy:y, rot:0, folded:false};
+      if(!insideRoom(rect(probe))) continue;
+      if(S.items.some(o => overlap(rect(probe), rect(o)))) continue;
+      return [Math.round(x/SNAP)*SNAP, Math.round(y/SNAP)*SNAP];
+    }
+  }
+  return [S.room.w/2, S.room.h/2];
+}
+
+function addItem(pid){
+  snapshot();
+  const [cx,cy] = freeSpot(pid);
+  const it = {id:uid(), pid, cx, cy, rot:0, folded:false};
+  S.items.push(it); sel = it.id; render();
+}
+
+/* Използваемият правоъгълник: при Г-образна стая взимаме
+   по-голямата от двете вписани ивици. */
+function innerRect(){
+  let ox = 0, oy = 0, RW = S.room.w, RH = S.room.h;
+  const n = notchRect();
+  if(n){
+    const c = S.room.notch.corner;
+    const aH = (RW - S.room.notch.w) * RH;
+    const aV = RW * (RH - S.room.notch.h);
+    if(aH >= aV){ RW -= S.room.notch.w; if(c==='tl'||c==='bl') ox = S.room.notch.w; }
+    else        { RH -= S.room.notch.h; if(c==='tl'||c==='tr') oy = S.room.notch.h; }
+  }
+  return {ox, oy, RW, RH};
+}
+
+const PAD = 60;
+
+/* Полагане по рафтове: най-високата работна зона първа, после центриране.
+   Чиста функция — ползва се и за проверка дали даден набор изобщо се побира. */
+function packZones(zones, RW, RH){
+  const list = zones.map((z,i) => ({i, zw:z[0], zh:z[1]})).sort((a,b) => b.zh - a.zh || b.zw - a.zw);
+  let x = PAD, y = PAD, shelf = 0, blockW = 0;
+  list.forEach(e => {
+    let {zw, zh} = e; e.rot = 0;
+    if(zw > RW - PAD*2 && zh <= RW - PAD*2){ [zw,zh] = [zh,zw]; e.rot = 90; }
+    if(x + zw > RW - PAD){ x = PAD; y += shelf; shelf = 0; }
+    e.x = x; e.y = y; e.w = zw; e.h = zh;
+    x += zw; shelf = Math.max(shelf, zh);
+    blockW = Math.max(blockW, x - PAD);
+  });
+  const blockH = y + shelf - PAD;
+  const offX = Math.max(PAD, (RW - blockW)/2) - PAD;
+  const offY = Math.max(PAD, (RH - blockH)/2) - PAD;
+  list.forEach(e => { e.x += offX; e.y += offY; });
+  return {list, blockW, blockH, fits: blockW <= RW - PAD*2 && blockH <= RH - PAD*2};
+}
+
+const zoneOf = pid => { const p = P[pid]; return p.zone ? [...p.zone] : [p.w, p.d]; };
+
+function autoArrange(){
+  snapshot();
+  const movable = S.items.filter(i => !P[i.pid].fixture);
+  const fixed   = S.items.filter(i =>  P[i.pid].fixture);
+  if(!movable.length){ toast('Няма какво да се подрежда'); return; }
+
+  const {ox, oy, RW, RH} = innerRect();
+  const packed = packZones(movable.map(i => zoneOf(i.pid)), RW, RH);
+  let unfit = 0;
+  packed.list.forEach(e => {
+    const it = movable[e.i];
+    it.rot = e.rot; it.folded = false;
+    it.cx = Math.round((ox + e.x + e.w/2)/SNAP)*SNAP;
+    it.cy = Math.round((oy + e.y + e.h/2)/SNAP)*SNAP;
+    if(e.y + e.h > RH) unfit++;
+  });
+
+  S.items = [...movable, ...fixed];
+  sel = null; render();
+  toast(unfit ? `${unfit} уреда не се побират в помещението` : 'Подредено');
+}
+
+/* ─────────── планове, изчислени за помещението ─────────── */
+const REFORMERS = PRODUCTS.filter(p => p.group === 'Реформъри').map(p => p.id);
+
+/* Колко броя от pid се побират с пълно отстояние, върху даден набор допълнения. */
+function maxFit(pid, extras, RW, RH){
+  let best = 0;
+  for(let n = 1; n <= 24; n++){
+    const zones = [...extras, ...Array(n).fill(pid)].map(zoneOf);
+    if(!packZones(zones, RW, RH).fits) break;
+    best = n;
+  }
+  return best;
+}
+
+function buildPlans(){
+  const {RW, RH} = innerRect();
+  const pref = $('#prefModel').value || 'onyx';
+  const scen = [
+    {name:'Максимален капацитет', extras:[],                       hint:'само реформъри'},
+    {name:'Студио с допълнения',  extras:['wunda','barel'],        hint:'+ стол и барел'},
+    {name:'Пълно оборудване',     extras:['kadi','wunda','barel'], hint:'+ Кадилак'},
+  ];
+  const plans = scen.map(sc => {
+    const n = maxFit(pref, sc.extras, RW, RH);
+    const items = n ? [...Array(n).fill(pref), ...sc.extras] : [];
+    const price = items.reduce((s,id) => s + P[id].price, 0);
+    return {...sc, n, items, price, fits: n > 0};
+  });
+
+  // ако и един реформър не влиза, предлагаме сгънат и малките уреди
+  if(!plans[0].fits){
+    const small = ['wunda','barel'].filter(id => packZones([zoneOf(id)], RW, RH).fits);
+    plans.push({
+      name:'Компактен вариант', hint:'сгънат реформър', n:0,
+      items:small, price:small.reduce((s,id)=>s+P[id].price,0), fits:small.length>0, folded:true
+    });
+  }
+  return plans;
+}
+
+let planKey = '';
+function paintPlans(force){
+  const key = [S.room.w, S.room.h, JSON.stringify(S.room.notch), $('#prefModel').value].join('|');
+  if(key === planKey && !force) return;
+  planKey = key;
+
+  const plans = buildPlans();
+  const {RW, RH} = innerRect();
+  $('#planHint').textContent = `${num(RW/1000,1)} × ${num(RH/1000,1)} м полезни`;
+
+  $('#presets').innerHTML = plans.map((pl,i) => {
+    if(!pl.fits) return `<button class="preset dead" disabled><b>${pl.name}</b>
+      <span>помещението е твърде малко</span></button>`;
+    const label = pl.n
+      ? `${pl.n} × ${P[$('#prefModel').value].short}` + (pl.extras && pl.extras.length ? ' + ' + pl.extras.map(e=>P[e].short).join(' + ') : '')
+      : pl.items.map(e => P[e].short).join(' + ');
+    const seats = pl.items.reduce((s,id) => s + P[id].seat, 0);
+    return `<button class="preset" data-i="${i}"><b>${pl.name}</b>
+      <span>${label}</span>
+      <span class="pl"><span>${seatWord(seats)}</span><span class="money">${fmt(pl.price)}</span></span></button>`;
+  }).join('');
+
+  $('#presets').querySelectorAll('.preset[data-i]').forEach(b => b.onclick = () => {
+    const pl = plans[+b.dataset.i];
+    snapshot();
+    S.items = pl.items.map(pid => ({id:uid(), pid, cx:0, cy:0, rot:0, folded:false}));
+    autoArrange();
+  });
+}
+
+/* ─────────── drag ─────────── */
+let drag = null;
+$('#floor').addEventListener('pointerdown', e => {
+  const el = e.target.closest('.item');
+  if(!el){ sel = null; render(); return; }
+  const it = S.items.find(i => i.id === el.dataset.id);
+  if(!it) return;
+  sel = it.id;
+  snapshot();
+  drag = {it, el, dx: e.clientX/scale - it.cx, dy: e.clientY/scale - it.cy, moved:false};
+  try{ el.setPointerCapture(e.pointerId); }catch(_){}
+  el.classList.add('dragging');
+  // селекцията се обновява директно — render() тук би изтрил елемента под пръста
+  $('#floor').querySelectorAll('.item.sel').forEach(n => n.classList.remove('sel'));
+  el.classList.add('sel');
+  paintPanels(validate());
+});
+$('#floor').addEventListener('pointermove', e => {
+  if(!drag) return;
+  const it = drag.it;
+  drag.moved = true;
+  it.cx = Math.round((e.clientX/scale - drag.dx)/SNAP)*SNAP;
+  it.cy = Math.round((e.clientY/scale - drag.dy)/SNAP)*SNAP;
+  const [w,h] = dims(it);
+  it.cx = Math.max(w/2, Math.min(S.room.w - w/2, it.cx));
+  it.cy = Math.max(h/2, Math.min(S.room.h - h/2, it.cy));
+  drag.el.style.left = it.cx*scale + 'px';
+  drag.el.style.top  = it.cy*scale + 'px';
+});
+['pointerup','pointercancel'].forEach(ev => $('#floor').addEventListener(ev, () => {
+  if(!drag) return;
+  drag.el.classList.remove('dragging');
+  if(!drag.moved) undoStack.pop();      // само селекция, не движение
+  drag = null; render();
+}));
+
+/* ─────────── controls ─────────── */
+function selItem(){ return S.items.find(i => i.id === sel); }
+
+$('#tRot').onclick  = () => { const i = selItem(); if(!i) return; snapshot(); i.rot = (i.rot+90)%360; render(); };
+$('#tFold').onclick = () => { const i = selItem(); if(!i) return; snapshot(); i.folded = !i.folded; render(); };
+$('#tDel').onclick  = () => { const i = selItem(); if(!i) return; snapshot(); S.items = S.items.filter(x => x!==i); sel = null; render(); };
+$('#tDup').onclick  = () => {
+  const i = selItem(); if(!i) return; snapshot();
+  const [cx,cy] = freeSpot(i.pid);
+  const c = {...i, id:uid(), cx, cy}; S.items.push(c); sel = c.id; render();
+};
+$('#tAuto').onclick  = autoArrange;
+$('#tClear').onclick = () => { snapshot(); S.items = []; sel = null; render(); };
+
+document.addEventListener('keydown', e => {
+  if(/^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;
+  if((e.metaKey||e.ctrlKey) && e.key === 'z'){ e.preventDefault(); undo(); return; }
+  const i = selItem(); if(!i) return;
+  if(e.key === 'Backspace' || e.key === 'Delete'){ e.preventDefault(); $('#tDel').click(); }
+  if(e.key === 'r' || e.key === 'R'){ $('#tRot').click(); }
+  const step = e.shiftKey ? SNAP*10 : SNAP;
+  const move = {ArrowLeft:[-step,0], ArrowRight:[step,0], ArrowUp:[0,-step], ArrowDown:[0,step]}[e.key];
+  if(move){ e.preventDefault(); i.cx += move[0]; i.cy += move[1]; render(); }
+});
+
+/* стая */
+function readRoom(){
+  S.room.w = Math.round(Math.max(2, +$('#rw').value || 2) * 1000);
+  S.room.h = Math.round(Math.max(2, +$('#rh').value || 2) * 1000);
+  if(S.room.notch){
+    S.room.notch.w = Math.min(S.room.w - 500, Math.round(Math.max(.3, +$('#nw').value || .3) * 1000));
+    S.room.notch.h = Math.min(S.room.h - 500, Math.round(Math.max(.3, +$('#nh').value || .3) * 1000));
+  }
+  render();
+}
+['rw','rh','nw','nh'].forEach(id => $('#'+id).addEventListener('input', readRoom));
+
+$('#shapeRect').onclick = () => setShape(false);
+$('#shapeL').onclick    = () => setShape(true);
+function setShape(isL){
+  $('#shapeRect').setAttribute('aria-pressed', String(!isL));
+  $('#shapeL').setAttribute('aria-pressed', String(isL));
+  $('#notchBox').hidden = !isL;
+  S.room.notch = isL ? {corner:'tl', w:+$('#nw').value*1000, h:+$('#nh').value*1000} : null;
+  render();
+}
+document.querySelectorAll('[data-corner]').forEach(b => b.onclick = () => {
+  document.querySelectorAll('[data-corner]').forEach(x => x.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true');
+  if(S.room.notch) S.room.notch.corner = b.dataset.corner;
+  render();
+});
+
+/* ROI плъзгачи */
+const knobs = [['kSess','vSess','sess',v=>v],['kPrice','vPrice','price',v=>'€'+v],['kFill','vFill','fill',v=>v+'%'],['kDays','vDays','days',v=>v]];
+knobs.forEach(([inp,out,key,f]) => {
+  $('#'+inp).addEventListener('input', e => {
+    S.roi[key] = +e.target.value;
+    $('#'+out).textContent = f(e.target.value);
+    paintPanels(validate());
+    save();
+  });
+});
+
+/* каталог + избор на реформър за плановете */
+(function buildUI(){
+  const groups = {};
+  PRODUCTS.forEach(p => (groups[p.group] ||= []).push(p));
+  $('#catalogue').innerHTML = Object.entries(groups).map(([g,list]) => `
+    <div class="cat-group"><h3>${g}</h3>${list.map(p => `
+      <button class="prod" data-pid="${p.id}">
+        ${IMG[p.id] ? `<img class="shot" src="${IMG[p.id]}" alt="">` : `<span class="glyph ${p.glyph||''}"></span>`}
+        <span class="txt">
+          <span class="nm">${p.short}</span>
+          <span class="dim">${p.w}×${p.d}${p.approx?' <em title="Размерът не е публикуван на сайта — ориентировъчен">~</em>':' мм'}</span>
+        </span>
+        ${p.price ? `<span class="pr">${fmt(p.price)}</span>` : ''}
+      </button>`).join('')}</div>`).join('');
+  $('#catalogue').querySelectorAll('.prod').forEach(b => b.onclick = () => addItem(b.dataset.pid));
+
+  $('#prefModel').innerHTML = REFORMERS.map(id =>
+    `<option value="${id}">${P[id].short}</option>`).join('');
+  $('#prefModel').onchange = () => paintPlans(true);
+})();
+
+/* ─────────── persist / share ─────────── */
+function save(){
+  try{ localStorage.setItem('reformia-studio', JSON.stringify(S)); }catch(_){}
+}
+function load(){
+  try{
+    const h = location.hash.slice(1);
+    const raw = h ? decodeURIComponent(escape(atob(h))) : localStorage.getItem('reformia-studio');
+    if(!raw) return false;
+    const d = JSON.parse(raw);
+    if(!d.room || !Array.isArray(d.items)) return false;
+    S = {...S, ...d};
+    S.items = S.items.filter(i => P[i.pid]);
+    $('#rw').value = S.room.w/1000; $('#rh').value = S.room.h/1000;
+    if(S.room.notch){
+      $('#nw').value = S.room.notch.w/1000; $('#nh').value = S.room.notch.h/1000;
+      $('#shapeL').setAttribute('aria-pressed','true'); $('#shapeRect').setAttribute('aria-pressed','false');
+      $('#notchBox').hidden = false;
+      document.querySelectorAll('[data-corner]').forEach(x =>
+        x.setAttribute('aria-pressed', String(x.dataset.corner === S.room.notch.corner)));
+    }
+    knobs.forEach(([inp,out,key,f]) => { $('#'+inp).value = S.roi[key]; $('#'+out).textContent = f(S.roi[key]); });
+    return true;
+  }catch(_){ return false; }
+}
+
+$('#btnShare').onclick = () => {
+  const h = btoa(unescape(encodeURIComponent(JSON.stringify(S))));
+  const url = location.origin + location.pathname + '#' + h;
+  navigator.clipboard?.writeText(url).then(
+    () => toast('Линкът е копиран'),
+    () => { location.hash = h; toast('Линкът е в адресната лента'); }
+  );
+};
+
+/* ─────────── PNG export ─────────── */
+function exportPNG(){
+  const K = 2, M = 90, TB = 190;               // мащаб, поле, титулна клетка
+  const s = Math.min((1100 - M*2) / S.room.w, 640 / S.room.h);
+  const W = Math.round(S.room.w*s) + M*2;
+  const planBottom = M + Math.round(S.room.h*s);
+  const H = planBottom + 44 + (TB-30) + 22;
+  const cv = document.createElement('canvas');
+  cv.width = W*K; cv.height = H*K;
+  const c = cv.getContext('2d');
+  c.scale(K,K);
+  const mm = v => v*s;
+
+  c.fillStyle = '#F4F1EB'; c.fillRect(0,0,W,H);
+  c.save(); c.translate(M,M);
+
+  // мрежа
+  c.strokeStyle = '#DCD6C8'; c.lineWidth = .6;
+  for(let x=0; x<=S.room.w; x+=GRID){ c.beginPath(); c.moveTo(mm(x),0); c.lineTo(mm(x),mm(S.room.h)); c.stroke(); }
+  for(let y=0; y<=S.room.h; y+=GRID){ c.beginPath(); c.moveTo(0,mm(y)); c.lineTo(mm(S.room.w),mm(y)); c.stroke(); }
+
+  // отрязък
+  const n = notchRect();
+  if(n){ c.fillStyle = '#E2DDD1'; c.fillRect(mm(n.x),mm(n.y),mm(n.x2-n.x),mm(n.y2-n.y)); }
+
+  // стени
+  c.strokeStyle = '#0F0F0D'; c.lineWidth = 3;
+  c.strokeRect(0,0,mm(S.room.w),mm(S.room.h));
+  if(n){ c.strokeRect(mm(n.x),mm(n.y),mm(n.x2-n.x),mm(n.y2-n.y)); }
+
+  // уреди
+  S.items.forEach(it => {
+    const p = P[it.pid], r = rect(it), z = zrect(it);
+    if(p.zone && !(it.folded && p.foldable)){
+      c.strokeStyle = 'rgba(110,127,91,.75)'; c.lineWidth = 1; c.setLineDash([5,4]);
+      c.strokeRect(mm(z.x),mm(z.y),mm(z.x2-z.x),mm(z.y2-z.y)); c.setLineDash([]);
+    }
+    c.fillStyle = '#FAFAF8'; c.strokeStyle = '#0F0F0D'; c.lineWidth = 1.6;
+    c.fillRect(mm(r.x),mm(r.y),mm(r.x2-r.x),mm(r.y2-r.y));
+    c.strokeRect(mm(r.x),mm(r.y),mm(r.x2-r.x),mm(r.y2-r.y));
+    if(!p.fixture){
+      c.fillStyle = '#A67C3A';
+      const vert = it.rot===90 || it.rot===270;
+      if(vert) c.fillRect(mm(r.x), mm(r.y), mm(r.x2-r.x), 4);
+      else     c.fillRect(mm(r.x), mm(r.y), 4, mm(r.y2-r.y));
+    }
+    c.fillStyle = '#2A2620'; c.font = '10px Menlo, monospace';
+    c.save(); c.translate(mm(it.cx), mm(it.cy));
+    if(it.rot===90||it.rot===270) c.rotate(-Math.PI/2);
+    c.textAlign = 'center'; c.textBaseline = 'middle';
+    const long = (it.rot===90||it.rot===270) ? mm(r.y2-r.y) : mm(r.x2-r.x);
+    c.fillText(c.measureText(p.short).width + 8 < long ? p.short : p.code, 0, 0);
+    c.restore();
+  });
+
+  // размерни линии
+  c.strokeStyle = '#A67C3A'; c.lineWidth = 1; c.fillStyle = '#A67C3A';
+  c.font = '11px Menlo, monospace'; c.textAlign = 'center'; c.textBaseline = 'middle';
+  c.beginPath(); c.moveTo(0,-26); c.lineTo(mm(S.room.w),-26); c.stroke();
+  c.beginPath(); c.moveTo(0,-32); c.lineTo(0,-20); c.moveTo(mm(S.room.w),-32); c.lineTo(mm(S.room.w),-20); c.stroke();
+  c.fillStyle = '#F4F1EB'; c.fillRect(mm(S.room.w)/2-32,-34, 64, 16);
+  c.fillStyle = '#A67C3A'; c.fillText(num(S.room.w/1000,2)+' м', mm(S.room.w)/2, -26);
+  c.beginPath(); c.moveTo(-26,0); c.lineTo(-26,mm(S.room.h)); c.stroke();
+  c.beginPath(); c.moveTo(-32,0); c.lineTo(-20,0); c.moveTo(-32,mm(S.room.h)); c.lineTo(-20,mm(S.room.h)); c.stroke();
+  c.save(); c.translate(-26, mm(S.room.h)/2); c.rotate(-Math.PI/2);
+  c.fillStyle = '#F4F1EB'; c.fillRect(-32,-8,64,16);
+  c.fillStyle = '#A67C3A'; c.fillText(num(S.room.h/1000,2)+' м',0,0); c.restore();
+  c.restore();
+
+  // титулна клетка
+  const m = metrics(), ty = planBottom + 44;
+  c.fillStyle = '#0F0F0D'; c.fillRect(M, ty, W-M*2, TB-30);
+  c.fillStyle = '#C9A96E'; c.font = '19px Georgia, serif'; c.textAlign = 'left'; c.textBaseline = 'top';
+  c.fillText('R E F O R M I A', M+18, ty+16);
+  c.fillStyle = '#8A8172'; c.font = '10px Menlo, monospace';
+  c.fillText('ПЛАН НА СТУДИО · thereformiabg.com · ' + new Date().toLocaleDateString('bg-BG'), M+18, ty+42);
+
+  const counts = {};
+  S.items.filter(i => !P[i.pid].fixture).forEach(i => counts[i.pid] = (counts[i.pid]||0)+1);
+  c.fillStyle = '#FAFAF8'; c.font = '11px Menlo, monospace';
+  Object.keys(counts).slice(0,6).forEach((k,i) => {
+    c.fillText(`${counts[k]}×  ${P[k].short}`, M+18, ty+70+i*16);
+  });
+
+  c.textAlign = 'right';
+  c.fillStyle = '#8A8172'; c.font = '10px Menlo, monospace';
+  c.fillText('ПЛОЩ ' + num(m.area,1) + ' м²   ·   РАБОТНИ МЕСТА ' + m.seats, W-M-18, ty+44);
+  c.fillStyle = '#C9A96E'; c.font = '27px Georgia, serif';
+  c.fillText(fmt(m.net), W-M-18, ty+64);
+  c.fillStyle = '#8A8172'; c.font = '10px Menlo, monospace';
+  c.fillText('без ДДС · доставката е включена', W-M-18, ty+100);
+  c.fillText('с ДДС 20%: ' + fmt(m.gross), W-M-18, ty+116);
+
+  cv.toBlob(b => {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(b);
+    a.download = 'REFORMIA-plan-studio.png';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  });
+  toast('Чертежът е свален');
+}
+$('#btnPng').onclick = exportPNG;
+$('#mPng').onclick   = exportPNG;
+
+/* ─────────── inquiry ─────────── */
+function summaryText(){
+  const m = metrics();
+  const counts = {};
+  S.items.filter(i => !P[i.pid].fixture).forEach(i => counts[i.pid] = (counts[i.pid]||0)+1);
+  const lines = Object.keys(counts).map(k => `  ${counts[k]} × ${P[k].name} — ${fmt(P[k].price*counts[k])}`);
+  const n = S.room.notch;
+  return [
+    'ЗАПИТВАНЕ ОТ СТУДИО ПЛАНЕРА',
+    '',
+    `Помещение: ${num(S.room.w/1000,2)} × ${num(S.room.h/1000,2)} м` + (n ? ` (Г-образно, отрязък ${num(n.w/1000,2)} × ${num(n.h/1000,2)} м)` : ''),
+    `Площ: ${num(m.area,1)} м²   ·   Работни места: ${m.seats}`,
+    '',
+    'Оборудване:',
+    ...(lines.length ? lines : ['  (няма избрани уреди)']),
+    '',
+    `Общо без ДДС: ${fmt(m.net)}`,
+    `Общо с ДДС 20%: ${fmt(m.gross)}`,
+    'Доставката е включена в цената.',
+    '',
+    `Разчет на възвръщаемост: ${m.seats} места × ${S.roi.sess} сесии × ${S.roi.fill}% запълване × €${S.roi.price} × ${S.roi.days} дни`,
+    '',
+    'Цените са ориентировъчни, по каталог. Моля, потвърдете наличност, цвят и срок за доставка.'
+  ].join('\n');
+}
+function fullMessage(){
+  const g = id => $('#'+id).value.trim();
+  const who = [
+    g('fName') && 'Име: ' + g('fName'),
+    g('fPhone') && 'Телефон: ' + g('fPhone'),
+    g('fMail') && 'Имейл: ' + g('fMail'),
+    g('fCity') && 'Град: ' + g('fCity'),
+    g('fNote') && 'Бележка: ' + g('fNote'),
+  ].filter(Boolean).join('\n');
+  return summaryText() + (who ? '\n\n— — —\n' + who : '');
+}
+$('#btnAsk').onclick = () => { $('#mSummary').textContent = summaryText(); $('#scrim').classList.add('on'); $('#fName').focus(); };
+$('#mClose').onclick = () => $('#scrim').classList.remove('on');
+$('#scrim').addEventListener('click', e => { if(e.target === $('#scrim')) $('#scrim').classList.remove('on'); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') $('#scrim').classList.remove('on'); });
+['fName','fPhone','fMail','fCity','fNote'].forEach(id =>
+  $('#'+id).addEventListener('input', () => $('#mSummary').textContent = fullMessage()));
+$('#mCopy').onclick = () => navigator.clipboard?.writeText(fullMessage()).then(
+  () => toast('Текстът е копиран'), () => toast('Копирането не сработи'));
+$('#mSend').onclick = () => {
+  const subj = 'Запитване за пилатес оборудване — план на студио';
+  location.href = 'mailto:support@thereformia.com?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(fullMessage());
+};
+
+/* ─────────── toast ─────────── */
+let tTimer;
+function toast(msg){
+  const t = $('#toast'); t.textContent = msg; t.classList.add('on');
+  clearTimeout(tTimer); tTimer = setTimeout(() => t.classList.remove('on'), 2000);
+}
+
+/* ─────────── boot ─────────── */
+if(!load()){
+  S.items = ['onyx','onyx','wunda'].map(pid => ({id:uid(), pid, cx:0, cy:0, rot:0, folded:false}));
+  render(); autoArrange();
+} else {
+  render();
+}
+paintPlans(true);
+let rTimer;
+addEventListener('resize', () => { clearTimeout(rTimer); rTimer = setTimeout(render, 120); });
+</script>
+</body>
+</html>

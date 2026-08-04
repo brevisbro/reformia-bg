@@ -1198,3 +1198,10 @@ html,body{overflow-x:hidden;max-width:100%}
   .hero__video{display:none}
   .hero__media{background:url("/videos/hero-poster.jpg") center/cover no-repeat}
 }
+
+/* Лентата с трохите. Вграденият padding-top беше писан за старата
+   закачена навигация; сега тя плава над съдържанието, затова отстъпът
+   трябва да покрива височината ѝ. Един клас вместо петнайсет вградени
+   стила, за да не се разминат пак. */
+.breadcrumb-bar{padding-top:7.5rem}
+@media (max-width:900px){ .breadcrumb-bar{padding-top:6rem} }

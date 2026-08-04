@@ -1119,3 +1119,82 @@ html,body{overflow-x:hidden;max-width:100%}
   color:var(--gold);font-size:.7rem;font-weight:600;
   letter-spacing:.24em;text-transform:uppercase;
 }
+
+/* ═══════════════════════════════════════════════════════
+   Герой с видео
+   Размазан цикъл под топъл воал и фино зърно. Видеото е
+   960×540 и тежи 165 KB — размазаното се компресира
+   отлично. Зърното е SVG наслагване, а не изпечено в
+   кадъра: шумът е враг на компресията.
+   ═══════════════════════════════════════════════════════ */
+.hero--video{
+  display:block;min-height:88svh;padding-top:0;background:var(--bg);
+  position:relative;overflow:hidden;isolation:isolate;
+}
+.hero--video::before,.hero--video::after{content:none}
+
+.hero__media{position:absolute;inset:0;z-index:0}
+.hero__video{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;display:block;
+  -webkit-mask-image:linear-gradient(180deg,#000 0,#000 62%,transparent 100%);
+  mask-image:linear-gradient(180deg,#000 0,#000 62%,transparent 100%);
+}
+/* топъл воал — по-плътен вляво, за да е четим тъмният текст */
+.hero__scrim{
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    linear-gradient(180deg, rgba(250,250,248,.92) 0, rgba(250,250,248,.30) 16%, rgba(250,250,248,0) 30%),
+    radial-gradient(58% 52% at 50% 52%, rgba(250,250,248,.86) 0, rgba(250,250,248,.52) 46%,
+                                        rgba(250,250,248,.12) 76%, rgba(250,250,248,0) 100%),
+    linear-gradient(0deg, #FAFAF8 0, rgba(250,250,248,.97) 5%, rgba(250,250,248,.72) 13%,
+                          rgba(250,250,248,.30) 24%, rgba(250,250,248,0) 38%);
+}
+/* фино зърно */
+.hero__grain{
+  position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.42'/%3E%3C/svg%3E");
+  background-size:180px 180px;
+  -webkit-mask-image:linear-gradient(180deg,#000 0,#000 58%,transparent 92%);
+  mask-image:linear-gradient(180deg,#000 0,#000 58%,transparent 92%);
+}
+
+.hero__inner{
+  position:relative;z-index:2;min-height:88svh;
+  display:flex;align-items:center;justify-content:center;
+}
+.hero--video .hero__content{
+  padding:7rem 0 5rem;max-width:46rem;margin-inline:auto;text-align:center;
+}
+.hero--video .hero__subtitle{margin-inline:auto}
+.hero--video .hero__actions{justify-content:center}
+.hero--video .hero__title{text-shadow:0 1px 0 rgba(250,250,248,.55)}
+
+/* вторият бутон е матово стъкло — иначе текстът му се губи във видеото */
+.hero--video .btn-gold{
+  background:rgba(255,255,255,.62);
+  backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);
+  border-color:rgba(255,255,255,.85);
+  color:var(--gold-dk);
+  box-shadow:0 10px 30px rgba(60,50,35,.14),inset 0 1px 0 rgba(255,255,255,.9);
+}
+.hero--video .btn-gold:hover{
+  background:rgba(255,255,255,.82);border-color:var(--gold);color:var(--gold-dk);
+}
+
+@media (max-width:900px){
+  .hero--video,.hero__inner{min-height:78svh}
+  .hero--video .hero__content{padding:5.5rem 0 3.5rem;max-width:100%}
+  .hero--video .hero__eyebrow{margin-inline:auto}
+  .hero__scrim{
+    background:
+      linear-gradient(180deg, rgba(250,250,248,.94) 0, rgba(250,250,248,.44) 18%, rgba(250,250,248,.10) 34%),
+      radial-gradient(74% 46% at 50% 50%, rgba(250,250,248,.88) 0, rgba(250,250,248,.46) 54%, rgba(250,250,248,0) 100%),
+      linear-gradient(0deg, #FAFAF8 0, rgba(250,250,248,.96) 7%, rgba(250,250,248,.62) 18%,
+                            rgba(250,250,248,.20) 34%, rgba(250,250,248,0) 52%);
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .hero__video{display:none}
+  .hero__media{background:url("/videos/hero-poster.jpg") center/cover no-repeat}
+}

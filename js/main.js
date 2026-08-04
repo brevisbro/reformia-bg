@@ -155,3 +155,76 @@
   }
 
 })();
+
+/* ═══════════════════════════════════════════════════════
+   ОБЛИК 2026 — движение
+   Класовете се слагат оттук, за да не се пипа разметката
+   на 25-те страници. Всичко е защитено: ако елемент липсва,
+   просто не се случва нищо.
+   ═══════════════════════════════════════════════════════ */
+(function () {
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── кои неща да се разкриват при скрол ── */
+  var TARGETS = [
+    '.section-label', '.section > .container > h2', '.page-header',
+    '.card', '.value-card', '.product-item', '.cta-band .container',
+    '.product-layout', '.specs-table', '.product-description',
+    '.blog-card', '.faq-item', '.planner-band__copy', '.planner-band__art'
+  ].join(',');
+
+  var io = window.IntersectionObserver ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (e, i) {
+      if (!e.isIntersecting) return;
+      setTimeout(function () { e.target.classList.add('in'); }, (i % 4) * 90);
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px' }) : null;
+
+  function arm(root) {
+    if (!io || reduce) return;
+    (root || document).querySelectorAll(TARGETS).forEach(function (el) {
+      if (el.dataset.rev) return;
+      el.dataset.rev = '1';
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  }
+  arm();
+  window.armReveal = arm;   /* страници, които добавят елементи по-късно */
+
+  /* ── лек наклон на картите под мишката ── */
+  if (!reduce && window.innerWidth > 820) {
+    document.querySelectorAll('.card, .value-card').forEach(function (card) {
+      card.addEventListener('pointermove', function (e) {
+        var r = card.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform =
+          'perspective(780px) rotateY(' + (px * 6).toFixed(2) + 'deg) rotateX(' +
+          (-py * 6).toFixed(2) + 'deg) translateY(-6px)';
+      });
+      card.addEventListener('pointerleave', function () { card.style.transform = ''; });
+    });
+  }
+
+  /* ── броячи, ако някога сложим такива ── */
+  var counters = document.querySelectorAll('[data-count]');
+  if (counters.length && window.IntersectionObserver) {
+    var cio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target, target = +el.dataset.count, start = null;
+        (function tick(t) {
+          if (start === null) start = t;
+          var p = Math.min(1, (t - start) / 1100);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + (el.dataset.suffix || '');
+          if (p < 1) requestAnimationFrame(tick);
+        })(performance.now());
+        cio.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function (c) { cio.observe(c); });
+  }
+})();

@@ -1163,3 +1163,16 @@ body::after{
 /* Стар недостатък: продуктовите страници даваха 18px хоризонтален скрол на
    телефон, без нито един елемент да излиза извън екрана. Затваряме го тук. */
 html,body{overflow-x:hidden;max-width:100%}
+
+/* Снимката в героя има вътрешен отстъп, затова 6% маска избледнява само
+   празното поле. Тук фейдът хапе достатъчно навътре, за да хване белия
+   фон на самата снимка. */
+.hero__image img{
+  padding:2rem;
+  -webkit-mask-image:
+    linear-gradient(to right,transparent 0,#000 17%,#000 83%,transparent 100%),
+    linear-gradient(to bottom,transparent 0,#000 13%,#000 87%,transparent 100%);
+  mask-image:
+    linear-gradient(to right,transparent 0,#000 17%,#000 83%,transparent 100%),
+    linear-gradient(to bottom,transparent 0,#000 13%,#000 87%,transparent 100%);
+}

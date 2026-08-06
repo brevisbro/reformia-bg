@@ -227,4 +227,22 @@
     }, { threshold: 0.5 });
     counters.forEach(function (c) { cio.observe(c); });
   }
+
+  /* ── Google Ads конверсии ──
+     Сайтът няма форма — заявката тръгва с клик на телефона или мейла,
+     затова точно тези два клика броим за конверсия. Слушаме на document,
+     а не на всяка връзка поотделно: така новите връзки в бъдещи страници
+     се броят сами, без да се пипа този файл. */
+  var CONVERSIONS = {
+    tel:    'AW-18239277512/6cbACJGtmN0cEMiTlflD',
+    mailto: 'AW-18239277512/Qy_uCJStmN0cEMiTlflD'
+  };
+
+  document.addEventListener('click', function (e) {
+    if (!e.target || !e.target.closest) return;
+    var link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if (!link || typeof gtag !== 'function') return;
+    var label = CONVERSIONS[link.getAttribute('href').split(':')[0]];
+    if (label) gtag('event', 'conversion', { send_to: label });
+  });
 })();

@@ -3,6 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Consent Mode v2 — отказ по подразбиране, докато посетителят не избере.
+       Стои ПРЕДИ Google тага: иначе тагът тръгва без ограничение и първите
+       мигове от посещението изтичат без съгласие. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      var ok = false;
+      try { ok = localStorage.getItem('reformia_consent') === 'all'; } catch (e) {}
+      var v = ok ? 'granted' : 'denied';
+      gtag('consent', 'default', {
+        ad_storage: v,
+        ad_user_data: v,
+        ad_personalization: v,
+        analytics_storage: v,
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      gtag('set', 'ads_data_redaction', !ok);
+      gtag('set', 'url_passthrough', true);
+    })();
+  </script>
   <!-- Google tag (gtag.js) — Google Ads AW-18239277512 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18239277512"></script>
   <script>
@@ -323,5 +346,6 @@
 
   <div class="toast"></div>
   <script src="/js/main.js?v=20260804i"></script>
+  <script src="/js/consent.js?v=20260806a" defer></script>
 </body>
 </html>

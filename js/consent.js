@@ -63,6 +63,8 @@
     }
     bar.classList.remove('is-open');
     setTimeout(function () { bar.remove(); }, 400);
+    // Лентата си отива — чатът може да покаже балона си (js/chat.js).
+    document.dispatchEvent(new CustomEvent('reformia:consent'));
   }
 
   bar.querySelector('.cc__b--no').addEventListener('click', function () { choose(false); });
